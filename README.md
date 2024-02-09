@@ -35,6 +35,9 @@ Additionally, it uses the modules :
 
 The script generates several plots related to the PCA and saves them in the `experiments/PCA/` directory.
 
+##Note
+
+For plotting of LDA modes there is a commented out version in DimensionalReductionMethods file.
 
 ## Contributing
 
