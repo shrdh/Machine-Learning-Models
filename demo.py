@@ -7,8 +7,7 @@ from Regression import Regression
 from plotter import *
 
 # Load data
-#matlab_data = sio.loadmat('HeatRamp/matlab_data.mat')
-matlab_data=sio.loadmat('Cycling/cyclingdata5.mat')
+matlab_data = sio.loadmat('HeatRamp/matlab_data.mat')
 allIntensities_, allTemps_, wavelengths_ = [matlab_data[key] for key in ['allIntensities', 'allTemps', 'wavelengths']]
 # print(allIntensities_.shape, allTemps_.shape, wavelengths_.shape)
 # print(allIntensities_.type, allTemps_.type, wavelengths_.type)
@@ -30,7 +29,7 @@ if not os.path.exists(figdir):
 plot_modes(reg, 'PCA', wavelengths, figdir, saveplots=False, maxModes=3)
 
 # #Plot the  time series
-# plot_time_series(reg,'LDA',figdir,saveplots=False) 
+plot_time_series(reg,'LDA',figdir,saveplots=False) 
 
 # Plot the out-of-sample regression results  
 plot_regressions_out_of_sample(reg, 'LDA', figdir, saveplots=False)
