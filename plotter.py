@@ -34,25 +34,6 @@ def plot_modes(reg, method, wavelengths, savedir, saveplots, maxModes):
     else:
         plt.show()
 
-# def plot_modes(reg, method, wavelengths, savedir, saveplots=False, maxModes=3):
-
-
-#     if method == 'PCA':
-#         plt.plot(wavelengths, reg.modes[:maxModes, :].T)
-#     elif method == 'LDA':
-      
-#         plt.plot(wavelengths, reg.modes[:maxModes, :maxModes].T)
-#     else:
-#         raise ValueError('Invalid method: {}'.format(method))
-
-#     plt.xlabel('Wavelength (nm)')
-#     plt.ylabel('Mode amplitude')
-#     plt.title('{} modes for {}'.format(method, os.path.basename(savedir)))
-#     plt.legend(['Mode {}'.format(i+1) for i in range(maxModes)])
-#     if saveplots:
-#         plt.savefig(os.path.join(savedir, '{}_modes.png'.format(method)))
-#     else:
-#         plt.show()
 def plot_time_series(reg, method, savedir, saveplots):
     """
     Plots the time series data for the given regression object and method.
